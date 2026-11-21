@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Un momento…</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0; display: grid; place-items: center; min-height: 100vh; background: #fdf8f2; color: #333; text-align: center; }
+</style>
+<script>
+  var ZONA = "Z12";
+  var HITS_ENDPOINT = "https://script.google.com/macros/s/AKfycbzEbwpzuIlJRSbQaxDk33L53cYwltb9S_YX0sGla8xj8w3xM8bHIAmOfVxg71UVQg_S/exec";
+  var FORM_URL_ZONA = "https://docs.google.com/forms/d/e/1FAIpQLSfT1E0anxVYbdeqBUdFRFj_w9RGWdHNYjxRe2ai5x6N6IjuFA/viewform?usp=pp_url&entry.1017101985=Z12";
+  try {
+    var url = HITS_ENDPOINT + "?zona=" + encodeURIComponent(ZONA) + "&t=" + Date.now();
+    new Image().src = url;
+    if (window.fetch) { fetch(url, { mode: "no-cors", keepalive: true }).catch(function () {}); }
+  } catch (e) { }
+  setTimeout(function () { window.location.replace(FORM_URL_ZONA); }, 600);
+</script>
+</head>
+<body>
+  <p>🎨 Te estamos llevando a tu inscripción…</p>
+</body>
+</html>
